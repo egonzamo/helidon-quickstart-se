@@ -12,11 +12,11 @@ build:
     # Build Docker image
     - internal/docker-build:
         dockerfile: target/Dockerfile
-        image-name: helidon-quickstart-se
+        image-name: helidon-quickstart-se10
 
     # Docker image, and push to OCIR.     
     - internal/docker-push:
-        image-name: helidon-quickstart-se
+        image-name: helidon-quickstart-se10
         working-dir: $WERCKER_ROOT
         tag: $WERCKER_GIT_COMMIT
         username: $OCIR_USERNAME
